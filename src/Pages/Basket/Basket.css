@@ -1,0 +1,26 @@
+.Basket {
+    padding: 20px;
+}
+
+.CartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.CartItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.CartItem img {
+    width: 100px;
+    height: 100px;
+}
+
+.CartActions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}

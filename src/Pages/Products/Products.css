@@ -1,0 +1,25 @@
+.Products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки в строке */
+    gap: 20px; /* Расстояние между карточками */
+    justify-items: center; /* Выравнивание карточек по центру */
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    .Products {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки на экранах среднего размера */
+    }
+}
+
+@media (max-width: 768px) {
+    .Products {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на экранах маленького размера */
+    }
+}
+
+@media (max-width: 480px) {
+    .Products {
+        grid-template-columns: 1fr; /* 1 колонка на очень маленьких экранах */
+    }
+}

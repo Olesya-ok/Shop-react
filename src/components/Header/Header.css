@@ -1,0 +1,84 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d2f8b1;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.Header img {
+    width: 50px;
+    height: 50px;
+}
+
+.Header nav {
+    width: 30%;
+}
+
+.HeaderList {
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.HeaderNavLink a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.HeaderNavLink a:hover {
+    text-decoration: underline;
+    color: #2a9d8f;
+}
+
+@media (max-width: 768px) {
+    .Header {
+        gap: 40px;
+        align-items: center;
+    }
+
+    .Header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Header nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .HeaderList {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .Header img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Header nav {
+        width: 100%;
+    }
+
+    .HeaderList {
+        gap: 15px;
+    }
+
+    .HeaderNavLink a {
+        font-size: 14px;
+    }
+}
