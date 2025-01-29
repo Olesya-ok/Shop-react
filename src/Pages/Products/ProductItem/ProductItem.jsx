@@ -1,7 +1,7 @@
 import "./ProductItem.css";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { CartContext } from "../../../CartContext/CartContext";
+import { CartContext } from "../../../Context/CartContext";
 
 const ProductItem = ({ product }) => {
     let navigate = useNavigate();

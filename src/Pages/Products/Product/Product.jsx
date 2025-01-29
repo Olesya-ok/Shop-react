@@ -1,8 +1,8 @@
 import "./Product.css";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-import { CartContext } from "../../../CartContext/CartContext";
+import {useNavigate, useParams} from "react-router-dom";
+import { CartContext } from "../../../Context/CartContext";
 
 const Product = () => {
     const [product, setProduct] = useState({});
@@ -18,6 +18,12 @@ const Product = () => {
         addToCart(product);
     };
 
+    const navigate = useNavigate();
+
+    function goHome(){
+        navigate("/");
+    }
+
     return (
         <div className="Product">
             <img src={product.image} alt={product.title} />
@@ -27,6 +33,7 @@ const Product = () => {
                 <h2>Category: {product.category}</h2>
                 <p>{product.description}</p>
                 <button onClick={onAddToCart}>Add to Basket</button>
+                <button onClick={goHome}>To main page</button>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import data from '../../data/adress.json';
+import './Adress.css'
 
 function Adress() {
     return (

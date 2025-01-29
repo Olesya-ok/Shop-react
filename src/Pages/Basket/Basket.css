@@ -1,5 +1,7 @@
 .Basket {
     padding: 20px;
+    height: 74vh;
+    overflow: auto;
 }
 
 .CartItems {

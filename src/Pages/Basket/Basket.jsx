@@ -1,9 +1,20 @@
 import { useContext } from "react";
-import { CartContext } from "../../CartContext/CartContext";
+import { CartContext } from "../../Context/CartContext";
 import "./Basket.css";
+import Products from "../Products/Products";
+import {useNavigate} from "react-router-dom";
 
 const Basket = () => {
-    const { cart, removeFromCart, clearCart } = useContext(CartContext); // Получаем данные из контекста
+    const { cart, removeFromCart, clearCart, addToCart } = useContext(CartContext);
+
+    const totalAmount = cart.reduce((acc, product) => acc + product.price * product.amount, 0);
+    const formattedTotalAmount = totalAmount.toFixed(2);
+
+    const navigate = useNavigate();
+
+    function goHome() {
+        navigate("/");
+    }
 
     return (
         <div className="Basket">
@@ -17,8 +28,21 @@ const Basket = () => {
                             <img src={product.image} alt={product.title} />
                             <div>
                                 <h2>{product.title}</h2>
-                                <p>{product.price}$</p>
-                                <button onClick={() => removeFromCart(product.id)}>Remove</button>
+                                <p>For one product price: {product.price}$</p>
+                                <p>Quantity: {product.amount}</p>
+                                <p>Total for all: {product.price * product.amount}</p>
+                                <div className="QuantityControls">
+                                    <button onClick={() => addToCart(product)}>+</button>
+                                    <button
+                                        onClick={() =>
+                                            product.amount > 1
+                                                ? removeFromCart(product.id, false)
+                                                : removeFromCart(product.id)
+                                        }
+                                    > - </button>
+                                </div>
+                                <button onClick={() => removeFromCart(product.id)}>Remove all</button>
+
                             </div>
                         </div>
                     ))}
@@ -26,7 +50,9 @@ const Basket = () => {
             )}
             {cart.length > 0 && (
                 <div className="CartActions">
+                    <p>Total Amount: {formattedTotalAmount}</p>
                     <button onClick={clearCart}>Clear Cart</button>
+                    <button onClick={goHome}>To main page</button>
                     <button onClick={() => alert("Order placed!")}>Place Order</button>
                 </div>
             )}
@@ -35,4 +61,6 @@ const Basket = () => {
 };
 
 export default Basket;
+
+
 

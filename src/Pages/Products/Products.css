@@ -1,25 +1,27 @@
 .Products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки в строке */
-    gap: 20px; /* Расстояние между карточками */
-    justify-items: center; /* Выравнивание карточек по центру */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
     padding: 20px;
+    height: 74vh;
+    overflow: auto;
 }
 
 @media (max-width: 1024px) {
     .Products {
-        grid-template-columns: repeat(3, 1fr); /* 3 колонки на экранах среднего размера */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .Products {
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки на экранах маленького размера */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .Products {
-        grid-template-columns: 1fr; /* 1 колонка на очень маленьких экранах */
+        grid-template-columns: 1fr;
     }
 }

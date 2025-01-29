@@ -13,7 +13,7 @@ const router = createBrowserRouter(
             <Route path="adress" element={<Adress />} />
             <Route path="basket" element={<Basket />} />
         </Route>
-    )
+    ), {basename: `/Shop-react`}
 );
 
 export default router;
