@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Shop-react/static/css/main.294e0fa6.css",
-    "main.js": "/Shop-react/static/js/main.18bed698.js",
+    "main.css": "/Shop-react/static/css/main.5455a53a.css",
+    "main.js": "/Shop-react/static/js/main.1d030f59.js",
     "static/media/cognitive-control_17435564.png": "/Shop-react/static/media/cognitive-control_17435564.5cc090dde22741c010d2.png",
     "index.html": "/Shop-react/index.html",
-    "main.294e0fa6.css.map": "/Shop-react/static/css/main.294e0fa6.css.map",
-    "main.18bed698.js.map": "/Shop-react/static/js/main.18bed698.js.map"
+    "main.5455a53a.css.map": "/Shop-react/static/css/main.5455a53a.css.map",
+    "main.1d030f59.js.map": "/Shop-react/static/js/main.1d030f59.js.map"
   },
   "entrypoints": [
-    "static/css/main.294e0fa6.css",
-    "static/js/main.18bed698.js"
+    "static/css/main.5455a53a.css",
+    "static/js/main.1d030f59.js"
   ]
 }
